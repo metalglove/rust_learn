@@ -7,3 +7,8 @@ edition = "2021"
 
 [dependencies]
 learn_utils = { version = "0.1.0", path = "learn_utils" }
+
+[workspace]
+members = [
+    "learn_utils",
+]
