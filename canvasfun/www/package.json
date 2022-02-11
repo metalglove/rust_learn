@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "webpack",
+    "build": "webpack build --config webpack.config.js",
     "serve": "webpack serve --config webpack.config.js",
     "start": "webpack-dev-server"
   },
@@ -15,8 +15,8 @@
     "webpack-dev-server": "^4.7.4",
     "copy-webpack-plugin": "^10.2.4"
   },
-  "browser": {
-    "canvasfun": "./pkg"
+  "dependencies": {
+    "canvasfun": "file:../pkg"
   },
   "main": "index.js"
 }
