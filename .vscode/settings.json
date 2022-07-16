@@ -4,6 +4,9 @@
     "canvasfun",
     "consts",
     "mousedown",
-    "mouseup"
-  ]
+    "mouseup",
+    "webgl"
+  ],
+  "editor.tabSize": 4,
+  "prettier.tabWidth": 4
 }

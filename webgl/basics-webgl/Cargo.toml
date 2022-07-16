@@ -1,0 +1,36 @@
+[package]
+name = "basics-webgl"
+version = "0.1.0"
+edition = "2021"
+description = "Learning the basics of webgl in Rust"
+repository = "https://github.com/metalglove/rust_learn/master/webgl"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+js-sys = "0.3.57"
+wasm-bindgen = "0.2.80"
+console_error_panic_hook = "0.1.7"
+lazy_static = "1.4.0"
+nalgebra = "0.31.0"
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+  'Document',
+  'Element',
+  'EventTarget',
+  'HtmlCanvasElement',
+  'MouseEvent',
+  'WebGlBuffer',
+  'WebGlVertexArrayObject',
+  'WebGl2RenderingContext',
+  'WebGlUniformLocation',
+  'WebGlProgram',
+  'WebGlShader',
+  'Window',
+]
+
+[profile.release]
+opt-level = "s"
