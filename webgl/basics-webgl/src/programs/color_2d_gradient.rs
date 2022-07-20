@@ -3,6 +3,7 @@ use js_sys::WebAssembly;
 use wasm_bindgen::JsCast;
 use web_sys::{WebGl2RenderingContext, WebGlBuffer, WebGlProgram, WebGlUniformLocation};
 
+#[allow(dead_code)]
 pub struct Color2DGradient {
     program: WebGlProgram,
     color_buffer: WebGlBuffer,
@@ -13,12 +14,13 @@ pub struct Color2DGradient {
     u_transform: WebGlUniformLocation,
 }
 
+#[allow(dead_code)]
 impl Color2DGradient {
     pub fn new(gl: &WebGl2RenderingContext) -> Self {
         let program = cf::link_program(
             &gl,
             super::super::shaders::vertex::color_2d_gradient::SHADER,
-            super::super::shaders::fragment::color_2d_gradient::SHADER,
+            super::super::shaders::fragment::varying_color_from_vertex::SHADER,
         ).unwrap();
 
         let vertices_rect: [f32; 8] = [

@@ -8,5 +8,11 @@
     "webgl"
   ],
   "editor.tabSize": 4,
-  "prettier.tabWidth": 4
+  "prettier.tabWidth": 4,
+  "rust-analyzer.linkedProjects": [
+    "Cargo.toml"
+  ],
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer",
+  },
 }

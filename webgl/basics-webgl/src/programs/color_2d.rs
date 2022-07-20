@@ -3,6 +3,7 @@ use js_sys::WebAssembly;
 use wasm_bindgen::JsCast;
 use web_sys::{WebGl2RenderingContext, WebGlBuffer, WebGlProgram, WebGlUniformLocation};
 
+#[allow(dead_code)]
 pub struct Color2D {
     program: WebGlProgram,
     rect_vertices_array_length: usize,
@@ -12,6 +13,7 @@ pub struct Color2D {
     u_transform: WebGlUniformLocation,
 }
 
+#[allow(dead_code)]
 impl Color2D {
     pub fn new(gl: &WebGl2RenderingContext) -> Self {
         let program = cf::link_program(
